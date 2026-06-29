@@ -39,64 +39,34 @@ Das Hauptskript `path_planning_amr_v2.py` führt folgende Schritte aus:
 
 ---
 
-## Repository-Struktur
+## Installation und Ausführung
 
-```text
-.
-├── path_planning_amr_v2.py
-├── path_planning_results.json
-├── figures_amr/
-│   ├── fig01_environment.png
-│   ├── fig02_cspace_1.png
-│   ├── fig03_cspace_2.png
-│   ├── fig04_paths.png
-│   └── fig05_lengths.png
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
-### Beschreibung der Dateien
-
-| Datei / Ordner | Beschreibung |
-|---|---|
-| `path_planning_amr_v2.py` | Hauptskript des Prototyps. Enthält Lagerdefinition, Robotergeometrien, Kollisionsprüfung, A*-Suche, Pfadglättung und Plot-Erzeugung. |
-| `path_planning_results.json` | Ergebnisdatei mit Rasterstatistiken, Pfadlängen und Suchkennzahlen. |
-| `figures_amr/` | Enthält die vom Skript erzeugten Visualisierungen. |
-| `requirements.txt` | Enthält die benötigte Python-Abhängigkeit für die Plot-Erzeugung. |
-| `.gitignore` | Verhindert, dass lokale Umgebungen und Cache-Dateien in Git aufgenommen werden. |
+Das Programm kann unter **macOS**, **Linux** und **Windows** ausgeführt werden. Voraussetzung ist eine installierte Python-3-Version.
 
 ---
 
-## Installation und Ausführung
-
-Die folgenden Befehle können in einem Terminal im Repository-Ordner ausgeführt werden.
-
-### 1. Repository herunterladen
+### Repository herunterladen
 
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY_NAME.git
-cd REPOSITORY_NAME
+git clone https://github.com/Kilian3000/-amr-path-planning-Fallstudie.git
+cd -amr-path-planning-Fallstudie
 ```
 
 Wenn das Repository bereits lokal vorhanden ist, reicht es, direkt in den Projektordner zu wechseln.
 
 ---
 
-### 2. Virtuelle Python-Umgebung erstellen
+### macOS / Linux
+
+Die folgenden Befehle werden im Terminal im Repository-Ordner ausgeführt.
+
+#### 1. Virtuelle Python-Umgebung erstellen
 
 ```bash
 python3 -m venv .venv
 ```
 
-Dadurch wird eine lokale Python-Umgebung im Ordner `.venv` erstellt.  
-Diese Umgebung verhindert, dass Python-Pakete systemweit installiert werden müssen.
-
----
-
-### 3. Virtuelle Umgebung aktivieren
-
-Auf macOS oder Linux:
+#### 2. Virtuelle Umgebung aktivieren
 
 ```bash
 source .venv/bin/activate
@@ -104,26 +74,67 @@ source .venv/bin/activate
 
 Nach der Aktivierung steht im Terminal normalerweise `(.venv)` am Zeilenanfang.
 
----
-
-### 4. Abhängigkeiten installieren
+#### 3. Abhängigkeiten installieren
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-Für die Pfadplanung selbst werden nur Standard-Python-Funktionen verwendet.  
-Für die Erzeugung der Diagramme wird `matplotlib` benötigt.
-
----
-
-### 5. Simulation ausführen
+#### 4. Simulation ausführen
 
 ```bash
 python3 path_planning_amr_v2.py
 ```
 
-Nach erfolgreicher Ausführung erscheinen im Terminal die berechneten Kennzahlen. Außerdem werden die Ergebnisdatei und die Abbildungen erzeugt beziehungsweise aktualisiert:
+---
+
+### Windows
+
+Unter Windows können die Befehle in **PowerShell** oder im **Windows Terminal** ausgeführt werden.
+
+#### 1. Virtuelle Python-Umgebung erstellen
+
+```powershell
+py -m venv .venv
+```
+
+#### 2. Virtuelle Umgebung aktivieren
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Falls PowerShell das Aktivieren blockiert, kann für die aktuelle Sitzung diese Richtlinie gesetzt werden:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Danach den Aktivierungsbefehl erneut ausführen:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+#### 3. Abhängigkeiten installieren
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+#### 4. Simulation ausführen
+
+```powershell
+py path_planning_amr_v2.py
+```
+
+---
+
+### Erwartete Ausgabe
+
+Nach erfolgreicher Ausführung erscheinen im Terminal die berechneten Kennzahlen zu Konfigurationsraum und Pfadplanung.
+
+Außerdem werden die Ergebnisdatei und die Abbildungen erzeugt beziehungsweise aktualisiert:
 
 ```text
 path_planning_results.json
@@ -131,6 +142,23 @@ figures_amr/*.png
 ```
 
 Wenn alles korrekt läuft, haben alle sechs Testläufe den Status `ok`.
+
+Die Ausgabe enthält unter anderem folgende Szenarien:
+
+```text
+Basis
+Enge Passage
+Sackgasse
+```
+
+jeweils für beide Robotergeometrien:
+
+```text
+R1 compact 0.8 x 0.8 m
+R2 carrier 1.2 x 1.2 m
+```
+
+Für die Erzeugung der Diagramme wird `matplotlib` benötigt. Ohne `matplotlib` läuft die Pfadplanung zwar trotzdem, die Bilder werden dann jedoch nicht neu erzeugt.
 
 ---
 
