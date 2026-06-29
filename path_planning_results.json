@@ -1,0 +1,199 @@
+{
+  "resolution": 0.2,
+  "cspace_stats": {
+    "R1 compact 0.8 x 0.8 m": {
+      "total": 6161,
+      "free": 3269,
+      "blocked": 2892,
+      "blocked_share": 0.4694043174809284
+    },
+    "R2 carrier 1.2 x 1.2 m": {
+      "total": 6161,
+      "free": 2394,
+      "blocked": 3767,
+      "blocked_share": 0.611426716442136
+    }
+  },
+  "paths": [
+    {
+      "scenario": "Basis",
+      "robot_name": "R1 compact 0.8 x 0.8 m",
+      "status": "ok",
+      "raw_length": 24.57,
+      "smooth_length": 23.58,
+      "raw_nodes": 111,
+      "smooth_nodes": 6,
+      "expansions": 2051,
+      "smooth_path": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          3.0,
+          4.0
+        ],
+        [
+          8.6,
+          4.6000000000000005
+        ],
+        [
+          11.600000000000001,
+          9.200000000000001
+        ],
+        [
+          18.6,
+          9.4
+        ],
+        [
+          19.0,
+          11.200000000000001
+        ]
+      ]
+    },
+    {
+      "scenario": "Basis",
+      "robot_name": "R2 carrier 1.2 x 1.2 m",
+      "status": "ok",
+      "raw_length": 25.39,
+      "smooth_length": 24.63,
+      "raw_nodes": 118,
+      "smooth_nodes": 6,
+      "expansions": 1650,
+      "smooth_path": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          8.8,
+          1.4000000000000001
+        ],
+        [
+          10.8,
+          4.2
+        ],
+        [
+          16.8,
+          4.4
+        ],
+        [
+          18.8,
+          7.6000000000000005
+        ],
+        [
+          19.0,
+          11.200000000000001
+        ]
+      ]
+    },
+    {
+      "scenario": "Enge Passage",
+      "robot_name": "R1 compact 0.8 x 0.8 m",
+      "status": "ok",
+      "raw_length": 8.0,
+      "smooth_length": 8.0,
+      "raw_nodes": 41,
+      "smooth_nodes": 2,
+      "expansions": 40,
+      "smooth_path": [
+        [
+          11.0,
+          9.200000000000001
+        ],
+        [
+          19.0,
+          9.200000000000001
+        ]
+      ]
+    },
+    {
+      "scenario": "Enge Passage",
+      "robot_name": "R2 carrier 1.2 x 1.2 m",
+      "status": "ok",
+      "raw_length": 11.53,
+      "smooth_length": 11.25,
+      "raw_nodes": 57,
+      "smooth_nodes": 4,
+      "expansions": 279,
+      "smooth_path": [
+        [
+          11.0,
+          9.200000000000001
+        ],
+        [
+          11.4,
+          7.2
+        ],
+        [
+          18.8,
+          7.4
+        ],
+        [
+          19.0,
+          9.200000000000001
+        ]
+      ]
+    },
+    {
+      "scenario": "Sackgasse",
+      "robot_name": "R1 compact 0.8 x 0.8 m",
+      "status": "ok",
+      "raw_length": 15.09,
+      "smooth_length": 14.45,
+      "raw_nodes": 64,
+      "smooth_nodes": 4,
+      "expansions": 671,
+      "smooth_path": [
+        [
+          7.0,
+          8.6
+        ],
+        [
+          10.8,
+          4.2
+        ],
+        [
+          16.6,
+          3.4000000000000004
+        ],
+        [
+          18.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "scenario": "Sackgasse",
+      "robot_name": "R2 carrier 1.2 x 1.2 m",
+      "status": "ok",
+      "raw_length": 15.55,
+      "smooth_length": 14.89,
+      "raw_nodes": 68,
+      "smooth_nodes": 5,
+      "expansions": 542,
+      "smooth_path": [
+        [
+          7.0,
+          8.6
+        ],
+        [
+          10.200000000000001,
+          4.800000000000001
+        ],
+        [
+          10.4,
+          4.2
+        ],
+        [
+          16.8,
+          3.6
+        ],
+        [
+          18.0,
+          1.0
+        ]
+      ]
+    }
+  ]
+}
